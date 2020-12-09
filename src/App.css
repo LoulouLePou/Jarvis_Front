@@ -1,0 +1,149 @@
+@media only screen and (min-width: 600px) {
+    @font-face {
+        font-family: Gilroy;
+        src: url(Fonts/Gilroy-Light.otf);
+    }
+    #meuf {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 25px;
+        color: #FF9924;
+        text-align: justify;
+    }
+    #temoin {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 21px;
+        line-height: 25px;
+        color: #FF9924;
+        text-align: justify;
+        margin-left: 150px;
+    }
+    form {
+        margin-top: 8%;
+        margin-bottom: 8%;
+        text-align: center;
+    }
+    input {
+        margin-bottom: 7%;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 10px rgba(124, 124, 124, 0.25);
+        border-radius: 4px;
+        font-family: Gilroy;
+        font-size: 15px;
+        color: #8B8B8B;
+    }
+    button {
+        width: 25%;
+        font-family: Gilroy;
+        font-size: 15px;
+        background-color: #FF9924;
+        box-shadow: 0px 2px 10px #FF9924;
+        color: white;
+        border-radius: 4px;
+        display: inline-block;
+        font-weight: 400;
+        vertical-align: middle;
+        user-select: none;
+        border: 1px solid transparent;
+        text-align: center;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+    #carre {
+        width: 80%;
+        height: 60%;
+        margin-top: 10%;
+        margin-right: 10%;
+        margin-left: 10%;
+        margin-bottom: 5%;
+        background: #FFFFFF;
+        box-shadow: 0px 3px 10px rgba(80, 80, 80, 0.25);
+        border-radius: 30px;
+        padding: 50px;
+    }
+    #sub {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 31px;
+        color: #FF9924;
+        text-align: justify;
+    }
+    #actu {
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 18px;
+        color: #FF9924;
+        text-align: justify;
+    }
+    #titre {
+        margin-left: 5%;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 60px;
+        color: #424242;
+        text-align: justify;
+    }
+    #frame {
+        margin-left: 4%;
+        width: 90%;
+        height: 60%;
+    }
+    #texte {
+        margin-left: 5%;
+        margin-top: 3%;
+        font-family: Gilroy;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 20px;
+        color: #000000;
+        text-align: justify;
+    }
+    #logo {
+        margin-left: 5%;
+        margin-bottom: 3%;
+        margin-top: 2%;
+        width: 120px;
+        height: 44px;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        height: 100px;
+        width: 100px;
+        outline: black;
+        background-size: 100%, 100%;
+        border-radius: 50%;
+        border: 1px solid black;
+        background-image: none;
+    }
+    .carousel-control-next-icon:after {
+        content: '>';
+        font-size: 55px;
+        color: red;
+    }
+    .carousel-control-prev-icon:after {
+        content: '<';
+        font-size: 55px;
+        color: red;
+    }
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin-right: 10px;
+    }
+    .carousel-indicators {
+        margin-right: 10px;
+    }
+}

@@ -1,7 +1,7 @@
 @media only screen and (min-width: 600px) {
     @font-face {
         font-family: Gilroy;
-        src: url(Fonts/Gilroy-Light.otf);
+        src: url(fonts/Gilroy-Light.otf);
     }
     #meuf {
         font-family: Gilroy;
@@ -47,7 +47,6 @@
         display: inline-block;
         font-weight: 400;
         vertical-align: middle;
-        user-select: none;
         border: 1px solid transparent;
         text-align: center;
         padding: .375rem .75rem;
@@ -67,6 +66,12 @@
         border-radius: 30px;
         padding: 50px;
     }
+    #inputError {
+        position: relative;
+        top: -35px;
+        color: red;
+    }
+
     #sub {
         font-family: Gilroy;
         font-style: normal;

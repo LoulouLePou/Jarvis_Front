@@ -1,5 +1,5 @@
 {
-    "endpoint": "http://jarvis-back-dev.eu-west-3.elasticbeanstalk.com/",
+    "endpoint": "https://api.jarvis-app.fr",
     "newsletter": {
         "url": "api/newsletter/add",
         "method": "POST"

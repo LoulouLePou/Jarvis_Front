@@ -19,7 +19,7 @@ class NewsletterForm extends React.Component {
 
       if (!firstname && type[0] === "firstname")
         errors.emptyName = "You must renseign a name sir";
-      else if (type[0] === "name") 
+      else if (type[0] === "firstname") 
         errors.emptyName = '';
       if (!lastname && type[0] === "lastname")
         errors.emptyLastname = "You must renseign a lastname sir";
@@ -40,7 +40,7 @@ class NewsletterForm extends React.Component {
 
   handleSubmit = (event) => {
     let params = this.state;
-    if (params.firstname == "" || params.lastname == "" || params.email == "") {
+    if (params.firstname === "" || params.lastname === "" || params.email === "") {
       console.log("problem with your input");
       event.preventDefault();
       return;
@@ -80,15 +80,15 @@ class NewsletterForm extends React.Component {
             <p id="actu">Pour suivre l’actualité de Jarvis</p>
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                    <input type="Nom" value={this.state.firstname} onChange={this.handleChange}
-                            className="form-control" id="NameInput" name="firstname" aria-describedby="NameInput" placeholder="Nom"/>
+                    <input type="Prénom" value={this.state.firstname} onChange={this.handleChange}
+                            className="form-control" id="FirstNameInput" name="firstname" aria-describedby="FirstNameInput" placeholder="Prénom"/>
                     {errors.emptyName !== '' &&
                     <span id="inputError">{errors.emptyName}</span>
                     }
                 </div>
                 <div className="form-group">
-                    <input type="Prénom" value={this.state.lastname} onChange={this.handleChange}
-                        className="form-control" id="LastNameInput" name="lastname" aria-describedby="LastNameInput" placeholder="Prénom"/>
+                    <input type="Nom" value={this.state.lastname} onChange={this.handleChange}
+                        className="form-control" id="LastNameInput" name="lastname" aria-describedby="LastNameInput" placeholder="Nom"/>
                     {errors.emptyLastname !== '' &&
                     <span id="inputError">{errors.emptyLastname}</span>
                     }

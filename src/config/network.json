@@ -1,7 +1,7 @@
 {
     "endpoint": "https://api.jarvis-app.fr",
     "newsletter": {
-        "url": "/add",
+        "url": "/api/newsletter/add",
         "method": "POST"
     }
 }

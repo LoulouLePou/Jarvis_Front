@@ -14,7 +14,7 @@ class NewsletterForm extends React.Component {
   }
 
   handleValidation = (type) => {
-      const { firstname, lastname, email} = this.state;
+      const {firstname, lastname, email} = this.state;
       let errors = this.state.errors;
 
       if (!firstname && type[0] === "name")
@@ -46,9 +46,10 @@ class NewsletterForm extends React.Component {
       button: "A bientot!"
     });
     let params = this.state;
-    if (!params.firstname || !params.lastname || !params.email) {
+    if (params.firstname == "" || params.lastname == "" || params.email == "") {
       console.log("problem with your input");
       event.preventDefault();
+      return;
     }
     const req = network.endpoint + network.newsletter.url;
     const method = network.newsletter.method;

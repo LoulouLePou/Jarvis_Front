@@ -44,9 +44,6 @@ class NewsletterForm extends React.Component {
       console.log("problem with your input");
       event.preventDefault();
     }
-    console.log(params.email);
-    console.log(params.firstname);
-    console.log(params.lastname);
     const req = network.endpoint + network.newsletter.url;
     const method = network.newsletter.method;
     fetch(req, {
@@ -61,9 +58,8 @@ class NewsletterForm extends React.Component {
         },
 
       }).then(function(response) {
-        console.log(response.json());
-        if (response.json().message == "User successfully added!")
-          swal("Thanks " + params.firstname + "!");
+        console.log(reponse);
+        swal("Thanks " + this.state.firstname + "!");
         return response.json();
       });
 

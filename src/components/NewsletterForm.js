@@ -17,7 +17,7 @@ class NewsletterForm extends React.Component {
       const {firstname, lastname, email} = this.state;
       let errors = this.state.errors;
 
-      if (!firstname && type[0] === "name")
+      if (!firstname && type[0] === "firstname")
         errors.emptyName = "You must renseign a name sir";
       else if (type[0] === "name") 
         errors.emptyName = '';
@@ -39,18 +39,18 @@ class NewsletterForm extends React.Component {
 
 
   handleSubmit = (event) => {
-    swal({
-      title: "Jarvis Team",
-      text: "Thanks " + this.state.firstname + "!",
-      icon: "success",
-      button: "A bientot!"
-    });
     let params = this.state;
     if (params.firstname == "" || params.lastname == "" || params.email == "") {
       console.log("problem with your input");
       event.preventDefault();
       return;
     }
+    swal({
+      title: "Thanks " + this.state.firstname + "!",
+      text: "Jarvis Team",
+      icon: "success",
+      button: "A bientot!"
+    });
     const req = network.endpoint + network.newsletter.url;
     const method = network.newsletter.method;
     fetch(req, {

@@ -39,6 +39,12 @@ class NewsletterForm extends React.Component {
 
 
   handleSubmit = (event) => {
+    swal({
+      title: "Jarvis Team",
+      text: "Thanks " + this.state.firstname + "!",
+      icon: "success",
+      button: "A bientot!"
+    });
     let params = this.state;
     if (!params.firstname || !params.lastname || !params.email) {
       console.log("problem with your input");
@@ -59,12 +65,6 @@ class NewsletterForm extends React.Component {
 
       }).then(response => response.json())
         .then(data => {
-          console.log(data);
-          swal({
-            title: "Jarvis Team",
-            text: "Thanks " + this.state.firstname + "!",
-            icon: "success",
-          });
           return data;
       });
     event.preventDefault();

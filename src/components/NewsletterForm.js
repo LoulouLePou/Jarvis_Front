@@ -39,8 +39,13 @@ class NewsletterForm extends React.Component {
 
   handleSubmit = (event) => {
     let params = this.state;
-    if (!params.firstname || !params.lastname || !params.email)
+    if (!params.firstname || !params.lastname || !params.email) {
+      console.log("problem with your input");
       event.preventDefault();
+    }
+    console.log(params.email);
+    console.log(params.firstname);
+    console.log(params.lastname);
     const req = network.endpoint + network.newsletter.url;
     const method = network.newsletter.method;
     fetch(req, {
@@ -52,7 +57,7 @@ class NewsletterForm extends React.Component {
           })
       }).then(function(response) {
         console.log("LOOOL");
-        console.log(response)
+        console.log(response);
         return response.json();
       });
 

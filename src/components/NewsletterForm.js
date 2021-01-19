@@ -1,5 +1,6 @@
 import React from 'react';
 import network from '../config/network.json';
+import swal from 'sweetalert';
 
 class NewsletterForm extends React.Component {
   constructor(props) {
@@ -60,8 +61,8 @@ class NewsletterForm extends React.Component {
         },
 
       }).then(function(response) {
-        console.log("LOOOL");
-        console.log(response.json);
+        if (response.json().message = "User successfully added!")
+          swal("Thanks " + params.firstname + "!");
         return response.json();
       });
 

@@ -59,12 +59,13 @@ class NewsletterForm extends React.Component {
 
       }).then(response => response.json())
         .then(data => {
-        swal({
-          title: "Jarvis Team",
-          text: "Thanks " + this.state.firstname + "!",
-          icon: "success",
-        });
-        return data;
+          console.log(data);
+          swal({
+            title: "Jarvis Team",
+            text: "Thanks " + this.state.firstname + "!",
+            icon: "success",
+          });
+          return data;
       });
     event.preventDefault();
 }

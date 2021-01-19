@@ -39,6 +39,9 @@ class NewsletterForm extends React.Component {
 
   handleSubmit = (event) => {
     let params = this.state;
+    console.log(params.name);
+    console.log(params.lastname);
+    console.log(params.email);
     if (!params.name || !params.lastname || !params.email)
       event.preventDefault();
     const req = network.endpoint + network.newsletter.url;

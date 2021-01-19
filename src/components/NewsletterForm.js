@@ -33,7 +33,7 @@ class NewsletterForm extends React.Component {
   }
 
   handleChange = (event) => {
-    this.setState({[event.target.firstname]: event.target.value},() => {this.handleValidation([event.target.firstname])});
+    this.setState({[event.target.name]: event.target.value},() => {this.handleValidation([event.target.firstname])});
   }
 
 

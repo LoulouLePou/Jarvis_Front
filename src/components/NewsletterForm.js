@@ -61,7 +61,8 @@ class NewsletterForm extends React.Component {
         },
 
       }).then(function(response) {
-        if (response.json().message = "User successfully added!")
+        console.log(response.json());
+        if (response.json().message == "User successfully added!")
           swal("Thanks " + params.firstname + "!");
         return response.json();
       });

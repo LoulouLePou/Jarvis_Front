@@ -5,7 +5,7 @@ class NewsletterForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        name: '',
+        firstname: '',
         lastname: '',
         email: '',
         errors: {emptyName: '', emptyLastname: '', emptyEmail: '', badEmail: ''}
@@ -13,10 +13,10 @@ class NewsletterForm extends React.Component {
   }
 
   handleValidation = (type) => {
-      const { name, lastname, email} = this.state;
+      const { firstname, lastname, email} = this.state;
       let errors = this.state.errors;
 
-      if (!name && type[0] === "name")
+      if (!firstname && type[0] === "name")
         errors.emptyName = "You must renseign a name sir";
       else if (type[0] === "name") 
         errors.emptyName = '';
@@ -33,23 +33,23 @@ class NewsletterForm extends React.Component {
   }
 
   handleChange = (event) => {
-    this.setState({[event.target.name]: event.target.value},() => {this.handleValidation([event.target.name])});
+    this.setState({[event.target.firstname]: event.target.value},() => {this.handleValidation([event.target.firstname])});
   }
 
 
   handleSubmit = (event) => {
     let params = this.state;
-    console.log(params.name);
+    console.log(params.firstname);
     console.log(params.lastname);
     console.log(params.email);
-    if (!params.name || !params.lastname || !params.email)
+    if (!params.firstname || !params.lastname || !params.email)
       event.preventDefault();
     const req = network.endpoint + network.newsletter.url;
     const method = network.newsletter.method;
     fetch(req, {
         method: method,
         body: JSON.stringify({
-          name: params.name,
+          firstname: params.firstname,
           lastname: params.lastname,
           email: params.email
           })
@@ -70,8 +70,8 @@ class NewsletterForm extends React.Component {
             <p id="actu">Pour suivre l’actualité de Jarvis</p>
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                    <input type="Nom" value={this.state.name} onChange={this.handleChange}
-                            className="form-control" id="NameInput" name="name" aria-describedby="NameInput" placeholder="Nom"/>
+                    <input type="Nom" value={this.state.firstname} onChange={this.handleChange}
+                            className="form-control" id="NameInput" name="firstname" aria-describedby="NameInput" placeholder="Nom"/>
                     {errors.emptyName !== '' &&
                     <span id="inputError">{errors.emptyName}</span>
                     }

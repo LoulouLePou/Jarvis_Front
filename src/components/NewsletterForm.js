@@ -56,8 +56,7 @@ class NewsletterForm extends React.Component {
           email: params.email
           }),
         headers: {
-          Accept: 'application/json',
-          'Content-Type': 'application/json',
+          'Content-Type': 'application/json'
         },
 
       }).then(function(response) {

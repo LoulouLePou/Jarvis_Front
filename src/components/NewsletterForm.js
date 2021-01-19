@@ -54,10 +54,15 @@ class NewsletterForm extends React.Component {
           firstname: params.firstname,
           lastname: params.lastname,
           email: params.email
-          })
+          }),
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+
       }).then(function(response) {
         console.log("LOOOL");
-        console.log(response);
+        console.log(response.json);
         return response.json();
       });
 

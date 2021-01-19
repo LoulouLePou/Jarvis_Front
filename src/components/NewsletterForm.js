@@ -57,12 +57,15 @@ class NewsletterForm extends React.Component {
           'Content-Type': 'application/json'
         },
 
-      }).then(function(response) {
-        console.log(response);
-        swal("Thanks " + this.state.firstname + "!");
-        return response.json();
+      }).then(response => response.json())
+        .then(data => {
+        swal({
+          title: "Jarvis Team",
+          text: "Thanks " + this.state.firstname + "!",
+          icon: "success",
+        });
+        return data;
       });
-
     event.preventDefault();
 }
 
